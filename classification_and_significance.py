@@ -444,8 +444,6 @@ def print_onlybest_classification_results(classif_results):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--language", default='en', type=str, help="en,fr,es,el")
-	parser.add_argument("--multilingual", action="store_true", help="whether we use the multilingual model or not")
-	parser.add_argument("--cased", action="store_true", help="whether we use the cased model or not")
 	parser.add_argument("--mode", default='classification',type=str, help="'significance' or 'classification'")
 	parser.add_argument("--do_freq", action="store_true", help="whether we run the freq classifier")
 	parser.add_argument("--english_freq_fn", default="", type=str, help="if do_freq is used and the language is English, you need to provide the path to the Google Ngrams frequency file")
