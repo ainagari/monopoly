@@ -1,6 +1,6 @@
 # 🎲 Let’s Play mono-poly 🎩
 
-Data and code (coming soon) for the paper:
+Data and code for the paper:
 
 Aina Garí Soler and Marianna Apidianaki (2021). [Let’s Play mono-poly: BERT Can Reveal Words’ Polysemy Level and Partitionability into Senses](https://arxiv.org/abs/2104.14694). To appear in _Transactions of the Association for Computational Linguistics_ (TACL).
 
@@ -46,5 +46,10 @@ The script `pos_freq_analysis.py` can be used to run significance tests on the s
 The script can be run as follows:
 
 `python classification_and_significance --mode classification --language fr --do_freq`
+
+
+### Clusterability experiments
+
+Coming soon
 
 
