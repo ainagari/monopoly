@@ -13,7 +13,7 @@ The files, which are pickled Python dictionaries, include sentences from all sen
 
 ### Results/
 
-The `Results`folder contains the average self-similarities by layer obtained by every model. Folder names indicate the language and the model used (bbcased = bert-base-cased, bert = bert-base uncased) 
+The `Results`folder contains the average self-similarities by layer obtained by every model. Folder names indicate the language and the model used (bbcased = bert-base-cased, bert = bert-base-uncased) 
 
 
 ### Obtaining vector representations and similarities
