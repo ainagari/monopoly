@@ -2,7 +2,7 @@
 
 Data and code (coming soon) for the paper:
 
-Aina Garí Soler and Marianna Apidianaki (2021). Let’s Play mono-poly: BERT Can Reveal Words’ Degree of Polysemy and Partitionability into Senses. To appear in _Transactions of the Association for Computational Linguistics_ (TACL).
+Aina Garí Soler and Marianna Apidianaki (2021). [Let’s Play mono-poly: BERT Can Reveal Words’ Polysemy Level and Partitionability into Senses](https://arxiv.org/abs/2104.14694). To appear in _Transactions of the Association for Computational Linguistics_ (TACL).
 
 
 ### Data
@@ -16,5 +16,35 @@ The files, which are pickled Python dictionaries, include sentences from all sen
 The `Results`folder contains the average self-similarities by layer obtained by every model. Folder names indicate the language and the model used (bbcased = bert-base-cased, bert = bert-base uncased) 
 
 
+### Obtaining vector representations and similarities
 
-To be continued
+In order to obtain representations and similarities from all the models used in the paper, you can run run_multi_monopoly.sh.
+This runs the script `monopoly_extract_reps.py` with the necessary arguments to run all experiments.
+
+### Analysis by frequency
+
+The script `pos_freq_analysis.py` serves for:
+- checking the distribution of pos and frequency in the bands for the dataset of a specific language (Section 5.1 in the paper),
+- balancing the dataset by pos/frequency (as explained in Section 5.3), 
+- calculating SelfSim values by pos and frequency range (Section 5.2) 
+- calculating SelfSim values by band in the balanced dataset (Section 5.3).
+
+Some information is printed in the terminal, and results are saved in the `posfreq_results/` (or `--out_dir`) directory. The script can be run as follows:
+
+`pos_freq_analysis.py --language en --out_dir [OUTPUT DIRECTORY] --english_freq_fn [PATH TO ENGLISH FREQUENCIES]`
+
+`--language` can be `[en|fr|es|el]`.
+
+#### Note on Frequency counts
+
+We provide the frequency counts for French, Spanish and Greek (`freq_counts_[LANGUAGE].pkl`), which were calculated from the [OSCAR corpus](https://oscar-corpus.com/) (Ortiz Suárez et al, 2019). We, however, cannot provide the English counts. A path to [Google Ngrams frequencies](https://catalog.ldc.upenn.edu/LDC2006T13) needs to be provided for English with the flag `--english_freq_fn`. 
+
+
+### Significance and classifiers
+
+The script `pos_freq_analysis.py` can be used to run significance tests on the similarity values obtained (with `--mode significance`) and to train classifiers for a given language (`--mode classification`). See the note on frequency counts above if you want to run the frequency classifier (with `--do_freq`).
+The script can be run as follows:
+
+`python classification_and_significance --mode classification --language fr --do_freq`
+
+
