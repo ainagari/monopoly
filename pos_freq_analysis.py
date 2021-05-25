@@ -370,7 +370,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--language", default='en', type=str, help="en,fr,es,el")
     parser.add_argument("--out_dir", default="posfreq_results", type=str, help="directory where results will be saved")
-    parser.add_argument("--freq_fn", default=0.01, type=float, help="if do_freq is used and the language is English, you need to provide the path to the Google Ngrams frequency file")
+    parser.add_argument("--english_freq_fn", default=0.01, type=float, help="if do_freq is used and the language is English, you need to provide the path to the Google Ngrams frequency file")
 
     args = parser.parse_args()
 
