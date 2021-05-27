@@ -53,6 +53,18 @@ The script can be run as follows:
 Coming soon
 
 
+### Citation
+
+If you use the code in this repository, please cite our paper:
+```
+@article{garisoler-2021-let,
+  title={{Let's Play Mono-Poly: BERT Can Reveal Words' Polysemy Level and Partitionability into Senses}},
+  author={Gar{\'\i} Soler, Aina and Apidianaki, Marianna},
+  journal={arXiv preprint arXiv:2104.14694},
+  year={2021}
+}
+```
+
 
 ### References
 
@@ -61,6 +73,7 @@ Pedro Javier Ortiz Suárez, Benoît Sagot, and Laurent Romary. 2019. Asynchronou
 Thorsten Brants and Alex Franz. 2006. Web 1T 5-gram Version 1. In LDC2006T13, Philadelphia, Pennsylvania. Linguistic Data Consortium.
 
 
+### Contact
 
-
+For any questions or requests feel free to contact me: aina dot gari at limsi dot fr
 
