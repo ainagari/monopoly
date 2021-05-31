@@ -37,7 +37,8 @@ where `--language` can be `[en|fr|es|el]`.
 
 #### Note on frequency counts
 
-We provide the frequency counts for French, Spanish and Greek (`freq_counts_[LANGUAGE].pkl`), which were calculated from the [OSCAR corpus](https://oscar-corpus.com/) (Ortiz Suárez et al, 2019). We, however, cannot provide the English counts. A path to [Google Ngrams frequencies](https://catalog.ldc.upenn.edu/LDC2006T13) (Brants and Franz, 2006) needs to be provided for English with the flag `--english_freq_fn`. 
+We provide the frequency counts for French, Spanish and Greek (`freq_counts_[LANGUAGE].pkl`), which were calculated from the [OSCAR corpus](https://oscar-corpus.com/) (Ortiz Suárez et al, 2019). We, however, cannot provide the English counts. A path to [Google Ngrams frequencies](https://catalog.ldc.upenn.edu/LDC2006T13) (Brants and Franz, 2006) needs to be provided for English with the flag `--english_freq_fn`. You can also use other frequency counts. They should be in a zipped text file with this format:
+`word[TAB]frequency\n`
 
 
 ### Significance and classifiers
