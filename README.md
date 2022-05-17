@@ -58,12 +58,18 @@ Coming soon
 
 If you use the code in this repository, please cite our paper:
 ```
-@article{garisoler-2021-let,
-  title={{Let's Play Mono-Poly: BERT Can Reveal Words' Polysemy Level and Partitionability into Senses}},
-  author={Gar{\'\i} Soler, Aina and Apidianaki, Marianna},
-  journal={arXiv preprint arXiv:2104.14694},
-  year={2021}
-}
+@article{gari-soler-apidianaki-2021-lets,
+    title = {{Let's Play Mono-Poly: BERT Can Reveal Words' Polysemy Level and Partitionability into Senses}},
+    author = "Gar{\'\i} Soler, Aina  and
+      Apidianaki, Marianna",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "9",
+    year = "2021",
+    address = "Cambridge, MA",
+    publisher = "MIT Press",
+    url = "https://aclanthology.org/2021.tacl-1.50",
+    doi = "10.1162/tacl_a_00400",
+    pages = "825--844"  
 ```
 
 
