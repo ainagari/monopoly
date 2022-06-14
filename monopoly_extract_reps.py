@@ -24,11 +24,10 @@ import argparse
 def get_data_and_outfns(dataset, control_type, language, model_name):
     folder = "Data/"
     if language == "en":
-        corpus = 'semcor'    
-        langstr = ""
+        corpus = 'semcor'        
     else:
         corpus = 'eurosense'
-        langstr = "_" + language
+    langstr = "_" + language
 
     modelnamestr = dict()
     modelnamestr["bert-base-uncased"] = "bert"
