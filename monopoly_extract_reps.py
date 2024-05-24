@@ -219,8 +219,7 @@ if __name__ == '__main__':
     toplayer = 13
     maxlen = 512
 
-   data, out_reps_fn, out_sims_fn, out_csv = get_data_and_outfns(dataset, control_type, language, model_name)
-
+    data, out_reps_fn, out_sims_fn, out_csv = get_data_and_outfns(dataset, control_type, language, model_name)
 
     infos = []
     for clas in data:
@@ -246,7 +245,6 @@ if __name__ == '__main__':
                     pdb.set_trace()
                 infos.append(info)
 
-
     print("EXTRACTING REPRESENTATIONS...")
     reps = extract_representations(infos, tokenizer, model_name,maxlen=maxlen)
     print("...DONE")
@@ -267,17 +265,14 @@ if __name__ == '__main__':
     ######## store representations
     pickle.dump(data, open(out_reps_fn, "wb"))
 
-
     ######## extract similarities
-
-
     cosines_with_words = dict() # by word (for the classifier)
     cosines = dict() # by class
     for clas in data:
         cosines[clas] = dict()
         cosines_with_words[clas] = dict()
 
-    for clas in data:
+        for clas in data:
         for tw in data[clas]:
             for laynum in range(0, toplayer):
                 k = "rep-" + str(laynum)
@@ -303,3 +298,5 @@ if __name__ == '__main__':
 
     pickle.dump(cosines_with_words, open(out_sims_fn, "wb"))
     df.to_csv(out_csv, sep="\t", index_label="Type")
+
+
