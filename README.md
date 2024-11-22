@@ -82,5 +82,5 @@ Thorsten Brants and Alex Franz. 2006. Web 1T 5-gram Version 1. In LDC2006T13, Ph
 
 ### Contact
 
-For any questions or requests feel free to contact me: aina dot gari at limsi dot fr
+For any questions or requests feel free to [contact me](https://ainagari.github.io/menu/contact.html).
 
